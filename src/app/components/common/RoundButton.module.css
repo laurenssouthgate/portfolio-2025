@@ -1,0 +1,18 @@
+.button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: var(--teal);
+    border-radius: 100%;
+    transition: background-color 150ms ease-in-out;
+
+    & img {
+        position: absolute;
+        inset: 50% 50%;
+        translate: -50% -50%;
+    }
+
+    &:hover {
+        background: var(--dark-teal);
+    }
+}

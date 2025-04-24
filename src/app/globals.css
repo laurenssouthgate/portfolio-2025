@@ -1,8 +1,13 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --dark-teal: #003B42;
+  --teal: #005f73;
+  --cyan: #A7D8D8;
+  --light-cyan: #E0F7FA;
 }
 
 @theme inline {
@@ -22,5 +27,101 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Light", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+header {
+  background: #f4f4f4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 92px;
+  transition: height 150ms ease-in-out;
+
+  .header-content {
+    height: 100%;
+  }
+
+  img {
+    transition: scale 150ms ease-in-out;
+  }
+
+  .column {
+    transition: translate 150ms ease-out;
+  }
+
+  .name, .profession {
+    color: var(--teal);
+    user-select: none;
+  }
+
+  .name {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .hr {
+    height: 1px;
+    width: 100%;
+    background: var(--teal);
+  }
+
+  .profession {
+    font-size: 0.875em;
+    letter-spacing: 8px;
+  }
+
+  &[data-sticky="true"] {
+    height: 60px;
+
+    .column {
+      translate: 0 -10rem;
+    }
+
+    img {
+      scale: .6;
+    }
+  }
+}
+
+.hero {
+  background: url("../../public/img/hero-section-background.webp") no-repeat center / cover;
+
+  .hero-content {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    h1 {
+      font-size: 5em;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 2em;
+    }
+
+    h1, p {
+      color: #fff;
+      width: 70%;
+    }
+  }
+}
+
+.projects {
+  background: var(--cyan);
+
+  h2 {
+    color: var(--teal);
+    font-size: 3em;
+  }
 }
