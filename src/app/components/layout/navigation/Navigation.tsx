@@ -3,6 +3,9 @@
 import Content from "@/app/components/common/Content";
 import Image from "next/image";
 import logo from "../../../../../public/img/logo.webp"
+import stickyLogo from "../../../../../public/img/square.webp"
+import menuIcon from "../../../../../public/img/menu.svg"
+import closeIcon from "../../../../../public/img/close.svg"
 import { useEffect, useState } from "react";
 
 export default function Navigation() {
@@ -19,18 +22,11 @@ export default function Navigation() {
     }, [])
 
     return (
-        <header data-sticky={ isSticky }>
+        <header data-sticky={ isSticky } data-menu-open={ menuOpen }>
             <Content className="header-content flex items-center justify-between">
-                <div className="flex items-center gap-5">
-                    <Image src={ logo } alt="Laurens Southgate" width={ 60 } />
-                    <div className="column">
-                        <span className="name">Laurens Southgate</span>
-                        <div className="hr"></div>
-                        <span className="profession">Web Developer</span>
-                    </div>
-                </div>
-                <button type="button">
-
+                <Image src={ !isSticky ? logo :  stickyLogo } alt="Laurens Southgate" width={ 220 } />
+                <button type="button" className="menu-button" onClick={ () => setMenuOpen(menuOpen => !menuOpen) }>
+                    <Image src={ !menuOpen ? menuIcon : closeIcon } alt="Menu" width={ 32 } />
                 </button>
             </Content>
         </header>

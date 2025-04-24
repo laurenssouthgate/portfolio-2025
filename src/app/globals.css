@@ -48,7 +48,7 @@ header {
   }
 
   img {
-    transition: scale 150ms ease-in-out;
+    transition: height 150ms ease-in-out;
   }
 
   .column {
@@ -78,6 +78,14 @@ header {
     letter-spacing: 8px;
   }
 
+  &[data-menu-open="true"] {
+    .menu-button {
+      & img {
+        width: 26px;
+      }
+    }
+  }
+
   &[data-sticky="true"] {
     height: 60px;
 
@@ -85,8 +93,8 @@ header {
       translate: 0 -10rem;
     }
 
-    img {
-      scale: .6;
+    img[alt="Laurens Southgate"] {
+      width: 40px;
     }
   }
 }
@@ -118,10 +126,49 @@ header {
 }
 
 .projects {
-  background: var(--cyan);
+  background: url("../../public/img/projects-background.webp") no-repeat center / cover;
 
   h2 {
     color: var(--teal);
     font-size: 3em;
+  }
+
+  .project-cards {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    .project-card {
+      border-radius: 10px;
+      padding: 1rem 1rem 3rem;
+      background: #f4f4f4;
+      color: #333;
+
+      & img {
+        margin-bottom: 1rem;
+      }
+
+      & h3 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+      }
+
+      & h3, p {
+        padding: 0 5px;
+      }
+
+      .project-tech {
+        font-style: italic;
+      }
+
+      .project-links {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: flex-end;
+        align-content: flex-end;
+
+      }
+    }
   }
 }

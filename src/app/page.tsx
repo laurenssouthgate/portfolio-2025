@@ -1,13 +1,14 @@
 import Layout from "@/app/components/layout/Layout";
 import FullPageSection from "@/app/components/common/FullPageSection";
 import Content from "@/app/components/common/Content";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import RoundButton from "@/app/components/common/RoundButton";
 import gitHubIcon from "../../public/img/github-logo.svg"
 import externalLinkIcon from "../../public/img/external-link.svg"
+import portfolioPreview from "../../public/img/portfolio.webp"
 
 type ProjectCardProps = {
-    imgSrc: string
+    imgSrc: StaticImageData
     projectTitle: string
     technologies: string
     description: string
@@ -49,11 +50,29 @@ export default function Home() {
                 </Content>
             </FullPageSection>
             <FullPageSection id={ 'projects' } className={ 'projects' }>
-                <Content className="h-screen flex flex-col justify-center">
+                <Content className="h-screen flex flex-col justify-center" narrow={ true }>
                     <h2>Things I&#39;ve Built</h2>
                     <div className="project-cards">
                         <ProjectCard
-                            imgSrc={ null }
+                            imgSrc={ portfolioPreview }
+                            projectTitle="This Website"
+                            technologies="Next.js, CSS, Tailwind CSS, Blender"
+                            description="This portfolio was created using Next.js. All graphics were created by me using
+                            Blender 3D modelling software. Styled using modular CSS/Tailwind."
+                            liveDemo="/"
+                            gitHub="https://github.com/laurenssouthgate/portfolio-2025"
+                        />
+                        <ProjectCard
+                            imgSrc={ portfolioPreview }
+                            projectTitle="Random Poetry Generator"
+                            technologies="React.js, JSON, CSS, Cursor AI, ChatGPT"
+                            description="A creative app that uses an AI generated bank of words, and sentences to form
+                            random poems that you can share with friends."
+                            liveDemo="/"
+                            gitHub="https://github.com/laurenssouthgate/portfolio-2025"
+                        />
+                        <ProjectCard
+                            imgSrc={ portfolioPreview }
                             projectTitle="This Website"
                             technologies="Next.js, CSS, Tailwind CSS, Blender"
                             description="This portfolio was created using Next.js. All graphics were created by me using
