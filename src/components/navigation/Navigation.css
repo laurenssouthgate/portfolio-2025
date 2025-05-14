@@ -1,0 +1,16 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    z-index: 1000;
+    display: flex;
+
+    ul {
+        justify-self: flex-end;
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+    }
+}
