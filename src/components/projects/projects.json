@@ -1,0 +1,18 @@
+[
+    {
+        "title": "This Portfolio",
+        "description": "This is my portfolio website, built with React, TypeScript, and React Three Fiber. The 3D models were created by me using Blender and the textures were created in Photoshop.",
+        "image": "portfolio-preview.webp",
+        "technologies": ["React", "TypeScript", "React Three Fiber", "Blender"],
+        "github": "https://github.com/laurenssouthgate/portfolio-2025",
+        "liveLink": "https://laurens-southgate.dev"
+    },
+    {
+        "title": "Project 2",
+        "description": "Description of project 2",
+        "image": "image2.jpg",
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "github": "https://github.com/username/project2",
+        "liveLink": "https://project2.com"
+    }       
+]

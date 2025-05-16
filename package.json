@@ -12,8 +12,10 @@
   "dependencies": {
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
+    "@types/react-transition-group": "^4.4.12",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-transition-group": "^4.4.5",
     "three": "^0.176.0"
   },
   "devDependencies": {
