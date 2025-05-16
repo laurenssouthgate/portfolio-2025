@@ -8,6 +8,9 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
+import Socials from './components/socials/Socials';
+import Logo from './components/logo/Logo';
+
 function App() {
   const [content, setContent] = useState<Content>(Content.Home);
 
@@ -18,6 +21,7 @@ function App() {
 
   return (
     <ContentContext.Provider value={ contextValues }> 
+      <Logo />
       <Navigation />
       {
         content === Content.Home && <Home />
@@ -31,6 +35,7 @@ function App() {
       {
         content === Content.Contact && <Contact />
       }
+      <Socials />
     </ContentContext.Provider>
   )
 }

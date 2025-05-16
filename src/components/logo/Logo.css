@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 20px;
+    margin-top: 20px;
+
+    & h1 {
+        margin: 0;
+        letter-spacing: 4px;
+        font-size: 32px;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    & span {
+        align-self: flex-end;
+        letter-spacing: 4px;
+    }
+}
