@@ -1,0 +1,25 @@
+.about-content {
+    .about-section {
+        position: absolute;
+        top: 0;
+        left: 33vw;
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 50px;
+
+        & p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            align-self: flex-end;
+            margin-top: 35px;
+        }
+    }
+}

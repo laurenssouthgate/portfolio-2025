@@ -36,18 +36,19 @@ h1 {
 }
 
 button {
+  outline: none;
+  border: none;
   border-radius: 8px;
-  border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #732E5D;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #552244;
 }
 button:focus,
 button:focus-visible {
@@ -73,6 +74,4 @@ button:focus-visible {
   position: relative;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
 }
