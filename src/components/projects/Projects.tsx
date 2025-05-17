@@ -4,12 +4,14 @@ import { useState } from "react";
 import BugSpray from "./BugSpray";
 import projectsData from "./projects.json";
 import portfolioPreview from "../../assets/webp/portfolio-preview.webp";
+import randomPoetryPreview from "../../assets/webp/random-poetry-generator.webp";
+import githubIcon from "../../assets/svg/github-logo.svg";
+import externalLinkIcon from "../../assets/svg/external-link.svg";
 import "./Projects.css";
 
 type Project = {
     title: string;
     description: string;
-    image: string;
     technologies: string[];
     github: string;
     liveLink?: string;
@@ -17,12 +19,13 @@ type Project = {
 
 const ProjectCard = ({ project } : { project: Project }) => {
     const imageMap: { [key: string]: string } = {
-        "portfolio-preview.webp": portfolioPreview,
+        "This Portfolio": portfolioPreview,
+        "Random Poetry Generator": randomPoetryPreview,
     };
 
     return (
         <div className="project-card">
-            <img src={ imageMap[project.image] } alt={ project.title } />
+            <img src={ imageMap[project.title] } alt={ project.title } />
             <div className="project-card__text">
                             <h3>{ project.title }</h3>
             <div className="technologies">
@@ -34,12 +37,12 @@ const ProjectCard = ({ project } : { project: Project }) => {
             <div className="project-links">
                 { project.github && (
                     <a href={ project.github } target="_blank" rel="noopener noreferrer">
-                        GitHub
+                        <img src={ githubIcon } alt="GitHub" width={ 20 } height={ 20 } />
                     </a>
                 )}
                 { project.liveLink && (
                     <a href={ project.liveLink } target="_blank" rel="noopener noreferrer">
-                        Live
+                        <img src={ externalLinkIcon } alt="Live link"  width={ 20 } height={ 20 } />
                     </a>
                 )}
             </div>
