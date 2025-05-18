@@ -5,6 +5,7 @@ import BugSpray from "./BugSpray";
 import projectsData from "./projects.json";
 import portfolioPreview from "../../assets/webp/portfolio-preview.webp";
 import randomPoetryPreview from "../../assets/webp/random-poetry-generator.webp";
+import todoHandlerPreview from "../../assets/webp/todo-handler-preview.webp";
 import githubIcon from "../../assets/svg/github-logo.svg";
 import externalLinkIcon from "../../assets/svg/external-link.svg";
 import "./Projects.css";
@@ -21,6 +22,7 @@ const ProjectCard = ({ project } : { project: Project }) => {
     const imageMap: { [key: string]: string } = {
         "This Portfolio": portfolioPreview,
         "Random Poetry Generator": randomPoetryPreview,
+        "Todo Handler": todoHandlerPreview,
     };
 
     return (
@@ -68,6 +70,7 @@ const Projects = () => {
 
     return (
         <div className="projects-content full">
+            <h1>My Projects</h1>
             <div className="projects-slider">
                 <div className="projects-slider__wrapper">
                     <div 
