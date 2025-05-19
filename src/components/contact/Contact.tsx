@@ -32,7 +32,7 @@ const Contact = () => {
                     </Float>
                     <OrbitControls enableZoom={false} target={[0, 0, 0]} />
                 </Canvas>
-                <form className="contact-form">
+                <form className="contact-form" netlify>
                     <h1>Get in touch</h1>
                     <p>Email me at <a href="mailto:laurenssouthgate@gmail.com">laurenssouthgate@gmail.com</a>, connect with me on <a href="https://www.linkedin.com/in/laurenssouthgate/" rel="noreferrer" target="_blank">LinkedIn</a>, <a href="https://x.com/lsouthgate87" rel="noreferrer" target="_blank">X</a>, or use the form below to get in touch</p>
                     <div className="form-group">
@@ -61,7 +61,7 @@ const Contact = () => {
                             id="message"
                             name="message"
                             placeholder="Enter your message"
-                            rows={5}
+                            rows={ 7 }
                             required
                         />
                     </div>

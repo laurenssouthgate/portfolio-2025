@@ -1,15 +1,43 @@
 .contact-form {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     right: 150px;
     top: 0;
     width: 50vw;
+    height: 100vh;
+
+    & a {
+        color: #732E5D;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     .form-group {
         display: flex;
         flex-direction: column;
+
+        & input, textarea {
+            background: #fff;
+            border: 1px solid #732E5D;
+            border-radius: 5px;
+            color: #000;
+            padding: 10px;
+            font-family: "Rubik", sans-serif;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        & input {
+            height: 30px;
+        }
     }
 
     & button {
         margin-top: 20px;
+        width: fit-content;
     }
 }
