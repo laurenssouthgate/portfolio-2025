@@ -1,0 +1,15 @@
+.contact-form {
+    position: absolute;
+    right: 150px;
+    top: 0;
+    width: 50vw;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & button {
+        margin-top: 20px;
+    }
+}
