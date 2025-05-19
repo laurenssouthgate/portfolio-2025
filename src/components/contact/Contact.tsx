@@ -30,9 +30,17 @@ const Contact = () => {
                             scale={[1, 1, 1]}
                         />
                     </Float>
-                    <OrbitControls enableZoom={false} target={[0, 0, 0]} />
+                    <OrbitControls enableZoom={ false } target={ [0, 0, 0] } />
                 </Canvas>
-                <form className="contact-form" netlify>
+                <form 
+                    className="contact-form" 
+                    name="contact" 
+                    method="POST" 
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="bot-field" />
                     <h1>Get in touch</h1>
                     <p>Email me at <a href="mailto:laurenssouthgate@gmail.com">laurenssouthgate@gmail.com</a>, connect with me on <a href="https://www.linkedin.com/in/laurenssouthgate/" rel="noreferrer" target="_blank">LinkedIn</a>, <a href="https://x.com/lsouthgate87" rel="noreferrer" target="_blank">X</a>, or use the form below to get in touch</p>
                     <div className="form-group">
