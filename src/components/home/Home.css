@@ -1,4 +1,12 @@
 .home-content {
+    .canvas-root {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+    }
+
     .hero-section {
         width: 50vw;
         height: 100vh;
@@ -19,6 +27,27 @@
             &:hover {
                 background: #552244;
             }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 90vw;
+        margin-left: 5vw;
+        overflow: hidden;
+
+        .canvas-root {
+            position: relative !important;
+            width: auto !important;
+            height: 40vh !important;
+        }
+        
+        .hero-section {
+            width: 100vw;
+            height: auto;
+            padding-left: 0;
         }
     }
 }

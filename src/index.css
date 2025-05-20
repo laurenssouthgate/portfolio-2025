@@ -33,6 +33,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2.5em;
+  }
 }
 
 button {
@@ -74,4 +78,9 @@ button:focus-visible {
   position: relative;
   width: 100vw;
   height: 100vh;
+
+  @media only screen and (max-width: 768px) {
+    width: 100vw;
+    height: auto;
+  }
 }
