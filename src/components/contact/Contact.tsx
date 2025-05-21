@@ -1,4 +1,3 @@
-import React from 'react';
 import './Contact.css';
 import { Float, OrbitControls, Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
