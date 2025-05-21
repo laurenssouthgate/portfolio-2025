@@ -1,4 +1,3 @@
-import './index.css';
 import { useState } from 'react';
 import './App.css'
 import { ContentContext } from './context/ContentContext';
