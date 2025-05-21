@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css'
 import { ContentContext } from './context/ContentContext';
 import { Content } from './model/Content';
+import type { ContentType } from './model/Content';
 import { Navigation } from './components/navigation/Navigation';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -12,7 +13,7 @@ import Socials from './components/socials/Socials';
 import Logo from './components/logo/Logo';
 
 function App() {
-  const [content, setContent] = useState<Content>(Content.Home);
+  const [content, setContent] = useState<ContentType>(Content.Home);
 
   const contextValues = {
     content,

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { ContentContext } from "../../context/ContentContext";
 import { Content } from "../../model/Content";
+import type { ContentType } from "../../model/Content";
 import "./Navigation.css";
 
 export const Navigation = () => {
@@ -11,7 +12,7 @@ export const Navigation = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleNavClick = (content: Content) => {
+    const handleNavClick = (content: ContentType) => {
         setContent(content);
         setIsMenuOpen(false);
     };

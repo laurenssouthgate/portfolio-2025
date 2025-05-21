@@ -1,15 +1,14 @@
 import { createContext } from "react";
-import { Content } from "../model/Content";
+import type { ContentType } from "../model/Content";
 
-export type ContentContextType = {
-    content: Content;
-    setContent: (content: Content) => void;
+interface ContentContextType {
+    content: ContentType;
+    setContent: (content: ContentType) => void;
 }
 
-
 export const ContentContext = createContext<ContentContextType>({
-    content: Content.Home,
-    setContent: () => {}
+    content: 'home',
+    setContent: () => {},
 });
 
 
