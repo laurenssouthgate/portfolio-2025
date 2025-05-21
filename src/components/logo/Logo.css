@@ -19,4 +19,17 @@
         align-self: flex-end;
         letter-spacing: 4px;
     }
+
+    @media only screen and (max-width: 768px) {
+        z-index: 1000;
+        
+        & h1 {
+            font-size: 20px;
+        }
+
+        & span {
+            font-size: 14px;
+            align-self: flex-start;
+        }
+    }
 }

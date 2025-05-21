@@ -70,25 +70,28 @@ const Projects = () => {
 
     return (
         <div className="projects-content full">
-            <h1>My Projects</h1>
-            <div className="projects-slider">
-                <div className="projects-slider__wrapper">
-                    <div 
-                        className="projects-slider__rail"
-                        style={{
-                            transform: `translateX(-${slideIndex * 100}%)`,
-                        }}
-                    >
-                        {projectsData.map((project) => (
-                            <ProjectCard key={project.title} project={project} />
-                        ))}
+            <div className="projects-section">
+                <h1>My Projects</h1>
+                <div className="projects-slider">
+                    <div className="projects-slider__wrapper">
+                        <div 
+                            className="projects-slider__rail"
+                            style={{
+                                transform: `translateX(-${slideIndex * 100}%)`,
+                            }}
+                        >
+                            {projectsData.map((project) => (
+                                <ProjectCard key={project.title} project={project} />
+                            ))}
+                        </div>
                     </div>
-                </div>
                 <div className="projects-slider__controls">
                     <button onClick={handlePrev}>Prev</button>
                     <button onClick={handleNext}>Next</button>
                 </div>
             </div>
+            </div>
+
             <Canvas
                 className="canvas-root"
                 style={{

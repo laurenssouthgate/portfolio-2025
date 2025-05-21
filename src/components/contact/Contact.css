@@ -8,6 +8,13 @@
     width: 50vw;
     height: 100vh;
 
+    @media only screen and (max-width: 768px) {
+        position: unset;
+        width: 90vw;
+        margin: 0 auto;
+        height: auto;
+    }
+
     & a {
         color: #732E5D;
 
@@ -41,3 +48,15 @@
         width: fit-content;
     }
 }
+
+.contact-content {
+    @media only screen and (max-width: 768px) {
+        .canvas-root {
+            position: relative !important;
+            width: auto !important;
+            height: 40vh !important;
+            margin-top: 5vh;
+        }
+    }
+}
+

@@ -7,6 +7,15 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+
+    @media only screen and (max-width: 768px) {
+       position: unset;
+       margin: 0 auto;
+       width: 100vw;
+       gap: 10px;
+       justify-content: center;
+       padding-top: 5vh;
+    }
 }
 
 .socials__link {

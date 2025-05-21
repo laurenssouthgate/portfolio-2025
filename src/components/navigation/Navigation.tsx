@@ -1,31 +1,50 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ContentContext } from "../../context/ContentContext";
 import { Content } from "../../model/Content";
 import "./Navigation.css";
 
 export const Navigation = () => {
     const { setContent } = useContext(ContentContext);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const handleNavClick = (content: Content) => {
+        setContent(content);
+        setIsMenuOpen(false);
+    };
 
     return (
         <nav>
-            <ul>
+            <button 
+                className={`burger-menu ${isMenuOpen ? 'active' : ''}`} 
+                onClick={toggleMenu} 
+                aria-label="Toggle menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul className={isMenuOpen ? 'mobile-menu-open' : ''}>
                 <li>
-                    <button onClick={() => setContent(Content.Home)}>
+                    <button onClick={() => handleNavClick(Content.Home)}>
                         Home
                     </button>
                 </li>
                 <li>
-                    <button onClick={() => setContent(Content.About)}>
+                    <button onClick={() => handleNavClick(Content.About)}>
                         About
                     </button>
                 </li>
                 <li>
-                    <button onClick={() => setContent(Content.Projects)}>
+                    <button onClick={() => handleNavClick(Content.Projects)}>
                         Projects
                     </button>
                 </li>
                 <li>
-                    <button onClick={() => setContent(Content.Contact)}>
+                    <button onClick={() => handleNavClick(Content.Contact)}>
                         Contact
                     </button>
                 </li>

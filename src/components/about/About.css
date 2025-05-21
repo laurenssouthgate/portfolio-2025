@@ -22,4 +22,29 @@
             margin-top: 35px;
         }
     }
+
+    
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90vw;
+        margin-left: 5vw;
+        overflow: hidden;
+
+        .canvas-root {
+            position: relative !important;
+            width: auto !important;
+            height: 40vh !important;
+            margin-top: 5vh;
+        }
+        
+        .about-section {
+            position: unset;
+            width: 90vw;
+            height: auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
