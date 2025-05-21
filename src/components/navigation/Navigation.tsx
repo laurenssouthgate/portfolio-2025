@@ -18,7 +18,7 @@ export const Navigation = () => {
     };
 
     return (
-        <nav>
+        <nav className="nav">
             <button 
                 className={`burger-menu ${isMenuOpen ? 'active' : ''}`} 
                 onClick={toggleMenu} 
