@@ -2,8 +2,26 @@ import './Contact.css';
 import { Float, OrbitControls, Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Book from "./Book";
+import emailjs from "emailjs-com"
+import { useRef } from 'react';
 
 const Contact = () => {
+    const formRef = useRef<HTMLFormElement | null>(null);
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!formRef.current) return;
+
+        emailjs.sendForm('service_n6ktpba', 'template_ah10nz4', formRef.current, '1lzVLo_kgOuu1ovK3')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {   
+              console.log(error.text);
+          });
+
+        formRef.current.reset();
+    }
     return (
         <div className="contact">
             <div className="contact-content full">
@@ -31,15 +49,7 @@ const Contact = () => {
                     </Float>
                     <OrbitControls enableZoom={ false } target={ [0, 0, 0] } />
                 </Canvas>
-                <form 
-                    className="contact-form" 
-                    name="contact" 
-                    method="POST" 
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="bot-field" />
+                <form ref={ formRef } onSubmit={ handleSubmit }>
                     <h1>Get in touch</h1>
                     <p>Email me at <a href="mailto:laurenssouthgate@gmail.com">laurenssouthgate@gmail.com</a>, connect with me on <a href="https://www.linkedin.com/in/laurenssouthgate/" rel="noreferrer" target="_blank">LinkedIn</a>, <a href="https://x.com/lsouthgate87" rel="noreferrer" target="_blank">X</a>, or use the form below to get in touch</p>
                     <div className="form-group">

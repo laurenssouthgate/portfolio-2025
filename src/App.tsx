@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css'
 import { ContentContext } from './context/ContentContext';
 import { Content } from './model/Content';
 import type { ContentType } from './model/Content';
