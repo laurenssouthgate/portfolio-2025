@@ -4,20 +4,24 @@ import { Canvas } from "@react-three/fiber";
 import Book from "./Book";
 import emailjs from "emailjs-com"
 import { useRef } from 'react';
+import useNotification from "../../hook/useNotification.tsx";
 
 const Contact = () => {
     const formRef = useRef<HTMLFormElement | null>(null);
+    const notification = useNotification()
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!formRef.current) return;
 
-        emailjs.sendForm('service_n6ktpba', 'template_ah10nz4', formRef.current, '1lzVLo_kgOuu1ovK3')
+        emailjs.sendForm('service_j3jzngj', 'template_ah10nz4', formRef.current, '1lzVLo_kgOuu1ovK3')
           .then((result) => {
               console.log(result.text);
+              notification('Message submitted successfully')
           }, (error) => {   
               console.log(error.text);
+              notification('There was an error sending your message')
           });
 
         formRef.current.reset();
@@ -38,9 +42,9 @@ const Contact = () => {
                     camera={{ position: [1, 2, 5], fov: 50 }}
                 >
                     <ambientLight />
-                    <directionalLight position={[5, 5, 5]} intensity={1} />
+                    <directionalLight position={[5, 5, 5]} intensity={ 1 } />
                     <Environment preset="sunset" />
-                    <Float floatIntensity={0.2} speed={1.75} rotationIntensity={0.5}>
+                    <Float floatIntensity={ 0.2 } speed={1.75} rotationIntensity={ 0.5 }>
                         <Book 
                             position={[0, -0.7, 0]}
                             rotation={[0, 3, 0]}

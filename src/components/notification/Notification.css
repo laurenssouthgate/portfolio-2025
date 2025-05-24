@@ -1,0 +1,12 @@
+.notification {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    translate: -50% 0;
+    background: #1a1a1a;
+    color: #fff;
+    z-index: 3000;
+    animation: transition-from-bottom 150ms ease-in-out;
+    line-height: 1;
+    padding: 0 2rem;
+}
