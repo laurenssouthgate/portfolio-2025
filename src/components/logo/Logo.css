@@ -22,6 +22,7 @@
 
     @media only screen and (max-width: 768px) {
         z-index: 1000;
+        position: absolute;
         
         & h1 {
             font-size: 20px;

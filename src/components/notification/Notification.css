@@ -3,7 +3,7 @@
     bottom: 2rem;
     left: 50%;
     translate: -50% 0;
-    background: #1a1a1a;
+    background: #732E5D;
     color: #fff;
     z-index: 3000;
     animation: transition-from-bottom 150ms ease-in-out;

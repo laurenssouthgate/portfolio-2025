@@ -37,17 +37,20 @@
         max-width: 90vw;
         margin-left: 5vw;
         overflow: hidden;
+        min-height: 85dvh;
 
         .canvas-root {
             position: relative !important;
             width: auto !important;
             height: 40vh !important;
+            margin-top: 5vh;
         }
         
         .hero-section {
             width: 100vw;
             height: auto;
             padding-left: 0;
+            margin-bottom: auto;
         }
     }
 }
