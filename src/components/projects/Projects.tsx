@@ -6,6 +6,7 @@ import projectsData from "./projects.json";
 import portfolioPreview from "../../assets/webp/portfolio-preview.webp";
 import randomPoetryPreview from "../../assets/webp/random-poetry-generator.webp";
 import todoHandlerPreview from "../../assets/webp/todo-handler-preview.webp";
+import tetrisPreview from "../../assets/webp/tetris-preview.webp";
 import githubIcon from "../../assets/svg/github-logo.svg";
 import externalLinkIcon from "../../assets/svg/external-link.svg";
 import "./Projects.css";
@@ -22,6 +23,7 @@ const ProjectCard = ({ project } : { project: Project }) => {
     const imageMap: { [key: string]: string } = {
         "This Portfolio": portfolioPreview,
         "Random Poetry Generator": randomPoetryPreview,
+        "Tetris": tetrisPreview,
         "Todo Handler": todoHandlerPreview,
     };
 

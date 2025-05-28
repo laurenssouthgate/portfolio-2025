@@ -14,10 +14,17 @@
         "liveLink": "https://random-poetry.netlify.app/"
     },
     {
+        "title": "Tetris",
+        "description": "Remake of the classic game created using JavaScript.",
+        "technologies": ["JavaScript"],
+        "github": "https://github.com/laurenssouthgate/tetris",
+        "liveLink": "https://laurenssouthgate.github.io/tetris/"
+    },
+    {
         "title": "Todo Handler",
         "description": "Todo Handler is a todo list app build with React and TypeScript, using localStorage to handle persistence.",
         "technologies": ["React", "TypeScript"],
         "github": "https://github.com/laurenssouthgate/react-todo-list",
         "liveLink": "https://todohandlerreact.netlify.app/"
-    }       
+    }
 ]
