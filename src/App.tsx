@@ -11,6 +11,7 @@ import Socials from './components/socials/Socials';
 import Logo from './components/logo/Logo';
 import {defaultNotification, NotificationContext, type NotificationData} from "./context/NotificationContext.tsx";
 import Notification from "./components/notification/Notification.tsx";
+import ChatBot from './components/chat-bot/ChatBot.tsx';
 
 function App() {
     const [content, setContent] = useState<ContentType>(Content.Home);
@@ -43,6 +44,7 @@ function App() {
                     content === Content.Contact && <Contact />
                 }
                 <Socials />
+                <ChatBot />
                 <Notification data={ notificationData } onClear={ clearNotification } />
             </ContentContext.Provider>
         </NotificationContext.Provider>

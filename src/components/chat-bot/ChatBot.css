@@ -1,0 +1,83 @@
+.chat-bot {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+}
+
+.chat-popup {
+    --popup-height: 25rem;
+    --popup-width: 18.75rem;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: var(--popup-width);
+    height: var(--popup-height);
+    bottom: 4.75rem;
+    right: 0;
+    border-radius: .5rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.625rem);
+    transform-origin: bottom;
+    animation: grow 150ms ease-in-out;
+}
+
+.chat-toggle {
+    position: relative;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.chat-window {
+    height: 100%;
+    padding: 0.5rem;
+    color: #000;
+    overflow-y: scroll;
+
+    .ai-msg,
+    .user-msg {
+        margin-bottom: 0.5rem;
+    }
+
+    .ai-msg {
+        text-align: right;
+        color: #732E5D;
+    }
+}
+
+.chat-form {
+    min-width: 100%;
+    margin-top: auto;
+    position: relative;
+
+    & input {
+        position: absolute;
+        height: 2.25rem;
+        width: 100%;
+        bottom: 0;
+        z-index: 800;
+        background: #fff;
+        border: none;
+        color: #000;
+        padding-left: 1rem;
+    }
+
+    .chat-send-btn {
+        border-radius: 0 !important;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+}
+
+@keyframes grow {
+    0% {
+        scale: 1 0;
+    }
+
+    100% {
+        scale: 1 1;
+    }
+}
