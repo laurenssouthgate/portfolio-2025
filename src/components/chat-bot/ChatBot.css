@@ -30,13 +30,14 @@
 
 .chat-window {
     height: 100%;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem 3rem;
     color: #000;
     overflow-y: scroll;
 
     .ai-msg,
     .user-msg {
         margin-bottom: 0.5rem;
+        font-size: 0.875rem;
     }
 
     .ai-msg {
