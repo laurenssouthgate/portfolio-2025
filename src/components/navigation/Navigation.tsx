@@ -44,9 +44,14 @@ export const Navigation = () => {
                         Projects
                     </button>
                 </li>
-                    <a href="https://www.nextlevelcoding.blog/" target="_blank" rel="noreferrer" title="Next Level Coding Blog">
+                <li>
+                    <button
+                        onClick={() => window.open("https://www.nextlevelcoding.blog/", "_blank", "noopener,noreferrer")}
+                        title="Next Level Coding Blog"
+                    >
                         Blog
-                    </a>
+                    </button>
+                </li>
                 <li>
                     <button onClick={() => handleNavClick(Content.Contact)}>
                         Contact
