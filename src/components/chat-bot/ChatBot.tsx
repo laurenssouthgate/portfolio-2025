@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
 import chatIcon from '../../assets/svg/chat.svg'
+import { ContentContext } from '../../context/ContentContext';
 import './ChatBot.css'
 
 type Message = {
@@ -13,6 +14,8 @@ const ChatBot = () => {
 	const [input, setInput] = useState('')
 	const [pageContent, setPageContent] = useState('')
 	const messagesEndRef = useRef<HTMLDivElement | null>(null)
+	const { content } = useContext(ContentContext)
+
 
 	useEffect(() => {
 		const extractContent = () => {
@@ -45,7 +48,7 @@ const ChatBot = () => {
 		}
 
 		setPageContent(extractContent())
-	}, [])
+	}, [content])
 
 	const askQuestion = async (question: string) => {
 		const userMessage: Message = { sender: 'user', text: question }
