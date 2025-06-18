@@ -40,7 +40,7 @@ const About = () => {
                 </p>
                 <p>I work primarily with React and TypeScript, and enjoy using tools like React Three Fiber to bring 3D models - which I create and texture in Blender and Photoshop - into the browser to build interactive, visually distinctive experiences. I have professional experience in a fast-paced agency environment, delivering high-quality websites and web apps to clients across a range of industries.
                 </p>
-                <p>Outside of work, I’m always exploring new technologies and developing personal projects. I have a keen interest in the intersection of AI and front-end development, and I’m open to both freelance and full-time opportunities.</p>
+                <p>Outside of work, I’m always exploring new technologies and developing personal projects. I have a keen interest in the intersection of AI and front-end development. I am also currently expanding my skills into the area of C and Data Structures and Algorithms. I am constantly looking to learn and develop next skills.</p>
                 <div className="buttons">
                     <button onClick={ () => setContent(Content.Contact) }>Get in touch</button>
                     <button onClick={ () => setContent(Content.Projects) }>Check out my projects</button>

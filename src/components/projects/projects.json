@@ -1,29 +1,45 @@
 [
     {
         "title": "This Portfolio",
-        "description": "This is my portfolio website, built with React, TypeScript, and React Three Fiber. The 3D models were created by me using Blender and the textures were created in Photoshop.",
-        "technologies": ["React", "TypeScript", "React Three Fiber", "Blender"],
+        "description": "This is my portfolio website, built with React, TypeScript, and React Three Fiber. The 3D models were created by me using Blender and the textures were created in Photoshop. I have added a AI assistant, powered by OpenAI, to help users navigate the site and answer questions.",
+        "technologies": [
+            "React",
+            "TypeScript",
+            "React Three Fiber",
+            "Blender",
+            "OpenAI"
+        ],
         "github": "https://github.com/laurenssouthgate/portfolio-2025",
         "liveLink": "https://laurens-southgate.dev"
     },
     {
         "title": "Random Poetry Generator",
         "description": "An amusing random poetry generator that uses AI populated JSON databases to store lists of nouns, verbs, adjectives and template sentences. Interface built with React and TypeScript, assisted by Cursor.",
-        "technologies": ["React", "TypeScript", "JSON", "Cursor"],
+        "technologies": [
+            "React",
+            "TypeScript",
+            "JSON",
+            "Cursor"
+        ],
         "github": "https://github.com/laurenssouthgate/random-poetry-generator-v2",
         "liveLink": "https://random-poetry.netlify.app/"
     },
     {
         "title": "Tetris",
         "description": "Remake of the classic game created using JavaScript.",
-        "technologies": ["JavaScript"],
+        "technologies": [
+            "JavaScript"
+        ],
         "github": "https://github.com/laurenssouthgate/tetris",
         "liveLink": "https://laurenssouthgate.github.io/tetris/"
     },
     {
         "title": "Todo Handler",
         "description": "Todo Handler is a todo list app build with React and TypeScript, using localStorage to handle persistence.",
-        "technologies": ["React", "TypeScript"],
+        "technologies": [
+            "React",
+            "TypeScript"
+        ],
         "github": "https://github.com/laurenssouthgate/react-todo-list",
         "liveLink": "https://todohandlerreact.netlify.app/"
     }
