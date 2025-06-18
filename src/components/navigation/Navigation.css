@@ -43,13 +43,15 @@ nav ul {
     margin-right: 20px;
 }
 
-nav ul li button {
+nav ul li button,
+nav ul li a {
     background: transparent;
     transition: background 0.3s ease;
     border: none;
 }
 
-nav ul li button:hover {
+nav ul li button:hover,
+nav ul li a:hover {
     background: rgba(0, 0, 0, 0.1);
 }
 
@@ -92,7 +94,8 @@ nav ul li button:hover {
         width: 100%;
     }
 
-    nav ul li button {
+    nav ul li button,
+    nav ul li a {
         width: 100%;
         padding: 10px;
         text-align: left;
