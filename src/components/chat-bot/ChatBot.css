@@ -29,7 +29,7 @@
 }
 
 .chat-window {
-    height: 100%;
+    height: 90%;
     padding: 0.5rem 1rem 3rem;
     color: #000;
     overflow-y: scroll;
