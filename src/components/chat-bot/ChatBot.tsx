@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useContext } from 'react';
 import chatIcon from '../../assets/svg/chat.svg'
 import { ContentContext } from '../../context/ContentContext';
+import { CHATBOT_CONTEXT } from '../../chatbot-context/ChatbotContext';
 import './ChatBot.css'
 
 type Message = {
@@ -61,7 +62,7 @@ const ChatBot = () => {
 			const res = await fetch('/.netlify/functions/ask', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ question, context: pageContent })
+				body: JSON.stringify({ question, context: `${ CHATBOT_CONTEXT }\n\n${ pageContent }` })
 			})
 
 			const data = await res.json();
