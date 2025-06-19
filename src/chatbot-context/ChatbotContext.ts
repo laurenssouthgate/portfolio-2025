@@ -1,4 +1,8 @@
 export const CHATBOT_CONTEXT = `
+I am a man, 38 years old living in Norwich England.
+
+I didn't always work as a developer. I transitioned into this career after working several different jobs. 
+
 I am a currently working as a developer for a digital marketing agency, delivering high quality websites and web apps to clients across a range of sectors.
 
 I use a PHP framework on website builds, with TypeScript to handle any interactive elements. The framework interacts with REST APIs to handle blogs and other dynamic content.
