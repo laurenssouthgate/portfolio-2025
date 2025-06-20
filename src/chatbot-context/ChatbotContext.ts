@@ -1,5 +1,5 @@
 export const CHATBOT_CONTEXT = `
-I am a man, 38 years old living in Norwich England.
+I am 38 years old living in Norwich England.
 
 I didn't always work as a developer. I transitioned into this career after working several different jobs. 
 
