@@ -11,7 +11,7 @@ export default async (req, res) => {
 		body: JSON.stringify({
 			model: 'gpt-3.5-turbo',
 			messages: [
-				{ role: 'system', content: 'You are a helpful and friendly assistant that can answer questions based on the information provided' },
+				{ role: 'system', content: 'You are a helpful and friendly assistant that can answer questions from the user about Laurens Southgate based on the information provided.' },
 				{ role: 'user', content: `${question}\n\nContext:\n${context}` }
 			]
 		}),
