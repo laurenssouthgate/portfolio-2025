@@ -116,7 +116,7 @@ const ChatBot = () => {
 
 			}
 
-			<button className="chat-toggle" onClick={ () => setChatWindowOpen(!chatWindowOpen) }>
+			<button className={ `chat-toggle ${ !chatWindowOpen ? 'pulse' : '' }` }  onClick={ () => setChatWindowOpen(!chatWindowOpen) }>
 				<img src={ chatIcon } width={ 36 } alt="Start a chat with the assistant" />
 			</button>
 		</div>
